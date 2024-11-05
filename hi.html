@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Age verification</title>
+</head>
+<body>
+<h2>User Details</h2>
+<form>
+<label>Name:</label>
+<input type="text" id="name">
+<label>Age:</label>
+<input type="number" id="age">
+</br>
+<button onclick="Agecal()">Submit</button>
+<p id="message">Display</p>
+</form>
+<script>
+function Agecal()
+{
+const name=document.getElementById("name").value;
+const age=document.getElementById("age").value;
+const message=document.getElementById("message");
+if(age>18)
+{
+return "Hello ${name} , you are not authorized to visit the website";
+}
+else
+{
+return "Welcome ${name}, to this site";
+}
+document.getElementById("message").innerHtml="Message:"+message;
+}
+</script>
+</body>
+</html>
